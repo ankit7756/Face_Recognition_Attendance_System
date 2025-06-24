@@ -1,0 +1,16 @@
+# Ignore virtual environment
+.venv/
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+
+# Ignore face encodings
+encodings.pickle
+
+# Ignore VS Code config files (optional)
+.vscode/
+
+# Ignore OS junk files
+.DS_Store
+Thumbs.db
