@@ -1,47 +1,70 @@
 # 👨‍🎓 Face Recognition Based Attendance Management System
 
-A smart attendance system that uses real-time **face recognition** to automatically record student attendance. This project is designed as a prototype for classrooms, using pre-trained models and webcam-based face detection.
+A smart attendance management system that combines **AI-powered face recognition** with a **web-based dashboard** to automate and streamline the process of recording and managing student attendance.  
+
+This project was developed as a **college group project** by a team of 4 ( Ankit Sharma, Pratik Neupane, Shreeya Poudel, Samekshya Baniya ), to demonstrate the practical application of Artificial Intelligence in solving real-world problems like classroom attendance.  
 
 ---
 
 ## 📌 About the Project
 
-This system captures student faces using a webcam, compares them with pre-saved images, and marks attendance automatically if a match is found. The goal is to eliminate manual attendance and bring a touch of automation using AI-powered facial recognition.
+This system integrates two main parts:
 
-It is currently a **local prototype**, designed to handle a small number of students for demonstration purposes. However, it can be expanded in the future into a full-scale attendance management system with web-based dashboards for students and teachers.
+1. **Face Recognition Model (Python)**  
+   - Captures student faces through a webcam.  
+   - Compares live faces with pre-saved images in the database.  
+   - Automatically logs attendance in a CSV file if a match is found.  
+   - Prevents duplicate entries for the same day.
+
+2. **Web Application (MERN Stack)**  
+   - Provides separate dashboards for **Admin, Teachers, and Students**.  
+   - Allows admins/teachers to view, manage, and download attendance reports.  
+   - Students can log in to check their attendance records.  
+   - API integration with the Python model for automated data transfer.
+
+The system is currently a **local prototype** for demonstration purposes but can be scaled into a cloud-based, real-time attendance management platform.
 
 ---
 
 ## 🧠 Technologies Used
 
-- **Python**
-- **OpenCV**
-- **face_recognition** library (based on dlib)
-- **CSV** for storing attendance logs
+### 🔹 Backend
+- **Node.js** & **Express.js** – REST API and server-side logic  
+- **MongoDB** – Database for storing user and attendance data  
+- **dotenv** – Environment variable management
+
+### 🔹 Frontend
+- **React.js** – User interface and dashboards  
+- **React Router** – Navigation and routing  
+- **Axios** – API calls to backend services
+
+### 🔹 AI/Model
+- **Python 3.8** – Compatible with the `face_recognition` library  
+- **OpenCV** – Real-time image capture and processing  
+- **dlib** – Underlying library for facial recognition  
+- **face_recognition** – High-level API for facial matching  
+- **CSV** – Stores attendance logs locally
 
 ---
 
 ## ✅ Features
 
-- Face detection and recognition using webcam
-- Automatic attendance marking with time and date
-- Prevents duplicate entries on the same day
-- Easy to expand and upgrade for real-time systems
+- **Face Recognition Model**
+  - Real-time face detection via webcam
+  - Matching against stored images
+  - Automatic attendance logging with name, date, and time
+  - Duplicate prevention for same-day entries
+
+- **Web Dashboard**
+  - Admin, Teacher, and Student login system
+  - Attendance history view and filtering
+  - Data visualization for quick insights
+  - Downloadable attendance reports
+  - Role-based access control
+
+- **System Integration**
+  - Python model generates encoded face data and logs attendance
+  - Backend processes and stores attendance data in MongoDB
+  - Frontend fetches and displays data for users
 
 ---
-
-## 🌐 Future Scope
-
-- Web-based dashboard for teachers and students
-- Subject-wise attendance tracking
-- Real-time classroom camera integration
-- Admin analytics and exportable reports
-
----
-
-## 👨‍💻 Project Members
-
-A group of 4 students ( Ankit Sharma, Pratik Neupane, Shreeya Poudel, Samekshya Baniya ), as part of a college project for demonstrating how AI can be used for solving real-world problems like classroom attendance.
-
----
-
